@@ -12,6 +12,6 @@ I have no idea how to pick a license dont be mad if i do something wrong plz.
 I have barelly any idea of how gitHub warks so i'll probably do many mistakes.
 I can't even make a proper website, but seriously github is so confusing.
 
-Keep going: [urbanghost.ru project](https://urbanghostsRU.html)
+Keep going: [urbanghost.ru project](https://voytekv.github.io/index.html)
 
 Contact me on Discord at: tiwger
