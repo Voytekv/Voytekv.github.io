@@ -61,7 +61,46 @@
       <p>
         By National Ocean Service, NOAA - PICTURES NOT YET ADDED"
       </p>
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horizontal Scrolling Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
+    .scroll-container {
+      display: flex;
+      overflow-x: scroll; /* Allows horizontal scrolling */
+      scroll-snap-type: x mandatory; /* Optional: Adds snap behavior */
+      gap: 10px; /* Optional: Adds space between images */
+      padding: 20px;
+      width: 100%;
+    }
+
+    .scroll-container img {
+      height: 150px; /* Set a fixed height for images */
+      object-fit: cover; /* Makes sure images maintain aspect ratio */
+      scroll-snap-align: start; /* Optional: Ensures smooth scroll snapping */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="scroll-container">
+    <img src="major_data_fold/naukan_fold/naukan1.jpg" alt="Image 1">
+    <img src="major_data_fold/naukan_fold/naukan2.jpg" alt="Image 2">
+  </div>
+
+</body>
+</html>
+
+      
       <p>test14</p>
     </div>
   </body>
