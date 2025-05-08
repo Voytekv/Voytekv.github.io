@@ -42,51 +42,52 @@
   </div>
 
   <script>
-    const searchInput = document.getElementById('searchInput');
-    const tagContainer = document.getElementById('tagContainer');
-    const tags = document.querySelectorAll('.tag');
-    const items = document.querySelectorAll('.item');
+  const searchInput = document.getElementById('searchInput');
+  const tagContainer = document.getElementById('tagContainer');
+  const tags = document.querySelectorAll('.tag');
+  const items = document.querySelectorAll('.item');
 
-    let activeTags = [];
+  let activeTags = [];
 
-    function filterItems() {
-  const searchText = searchInput.value.toLowerCase();
+  function filterItems() {
+    const searchText = searchInput.value.toLowerCase();
 
-  items.forEach(item => {
-    const text = item.textContent.toLowerCase();
-    const itemTags = item.dataset.tags
-      .split(',')
-      .map(tag => tag.trim().toLowerCase());
+    items.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      const itemTags = item.dataset.tags
+        .toLowerCase()
+        .split(',')
+        .map(tag => tag.trim());
 
-    const matchesSearch = text.includes(searchText);
-    const matchesTags = activeTags.length === 0 || activeTags.some(tag => itemTags.includes(tag.toLowerCase()));
+      const matchesSearch = text.includes(searchText);
+      const matchesTags = activeTags.length === 0 || activeTags.some(tag => itemTags.includes(tag));
 
-    if (matchesSearch && matchesTags) {
-      item.classList.remove('hidden');
-    } else {
-      item.classList.add('hidden');
-    }
-  });
-}
-
-
-    searchInput.addEventListener('input', filterItems);
-
-    tagContainer.addEventListener('click', (e) => {
-      if (e.target.classList.contains('tag')) {
-        e.target.classList.toggle('active');
-        const tag = e.target.dataset.tag;
-
-        if (activeTags.includes(tag)) {
-          activeTags = activeTags.filter(t => t !== tag);
-        } else {
-          activeTags.push(tag);
-        }
-
-        filterItems();
+      if (matchesSearch && matchesTags) {
+        item.classList.remove('hidden');
+      } else {
+        item.classList.add('hidden');
       }
     });
-  </script>
+  }
+
+  searchInput.addEventListener('input', filterItems);
+
+  tagContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('tag')) {
+      e.target.classList.toggle('active');
+      const tag = e.target.dataset.tag.toLowerCase();
+
+      if (activeTags.includes(tag)) {
+        activeTags = activeTags.filter(t => t !== tag);
+      } else {
+        activeTags.push(tag);
+      }
+
+      filterItems();
+    }
+  });
+</script>
+
 
 </body>
 </html>
