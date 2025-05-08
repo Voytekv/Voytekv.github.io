@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pyramiden</title>
+    <style>
+      body {
+        font-family: 'Segoe UI', sans-serif;
+        background-color: #f4f4f4;
+        color: #222;
+        padding: 2rem;
+        line-height: 1.6;
+      }
+      h1 {
+        color: #2c3e50;
+      }
+      h6 {
+        font-style: italic;
+        color: #888;
+      }
+      ul {
+        margin-bottom: 1rem;
+      }
+      li a {
+        text-decoration: none;
+        color: #007acc;
+      }
+      li a:hover {
+        text-decoration: underline;
+      }
+      .section {
+        background: #fff;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        max-width: 600px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <h6>Abandoned Soviet Port Settlement</h6>
+      <h1>PYRAMIDEN</h1>
+      <p>
+        Pyramiden (Norwegian: pʏrɑˈmîːdn̩)
+      </p>
+      <p>
+        Foundation and abandon: [1910 ; 1998]
+      </p>
+      <p>
+        Location: Spitsbergen island, Norway (bought by CCCP)
+        Coordinate: 78°39′22″N 16°19′30″E
+      </p>
+      <p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5809.793557875579!2d16.32991476010728!3d78.65592977380244!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x459d998a5898a749%3A0xbb252eafca66d80c!2sPyramiden%209170%2C%20Svalbard%20et%20Jan%20Mayen!5e1!3m2!1sfr!2sbe!4v1746711970526!5m2!1sfr!2sbe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </p>
+
+      <p><h3>Basic infos</h3></p>
+      <p>
+        Pyramiden, located at the foot of Billefjorden on the island of Spitsbergen, was founded by Sweden in 1910 and sold to the Soviet Union in 1927. It is named after a nearby pyramid-shaped mountain. The closest settlements are Longyearbyen (50 km south), Barentsburg (100 km southwest), and Ny-Ålesund (100 km west). During Soviet times, its population mode mostly of Ukrainians, was primarily composed of miners from Donbas and from Volyn.
+        The settlement was owned by Arktikugol, a Russian state-owned mining company which also operates Barentsburg. At its peak, Pyramiden housed over 1,000 people and included extensive amenities: a cultural centre with a theatre, library, art and music studios, a sports complex, a 24-hour cantina, and a primary school. Notably, it featured both the northernmost monument to Vladimir Lenin and the northernmost swimming pool.
+        A tragic event occurred in 1996, when a charter flight for Arktikugol crashed near Svalbard Airport, killing 141 people.
+        From 1955 to 1998, the mine yielded up to nine million tonnes of coal. Operations ceased on March 31, 1998, and the town was abandoned later that year, with the last resident leaving on October 10, turning Pyramiden into a ghost town.
+        Until 2007, it remained uninhabited, with buildings left mostly intact. In 2012, Aleksandr Romanovsky became the first person to return, later joined by five others. Romanovsky, a musician and tour guide, dubbed himself the "world's most northern head-banger" and lived alone in the abandoned town for years.
+        On August 27, 2019, Pyramiden hosted the world's northernmost film festival, celebrating 100 years of Soviet cinema.
+        In 2022, Russia announced new investments to strengthen its presence in both Pyramiden and Barentsburg.
+        Since 2001, former residents have made annual visits. In 2007, Port Vladimir and other settlements were officially abolished.
+      </p>
+
+      <p>
+        Images and archival photos pending insertion.
+      </p>
+
+      <p>test14</p>
+    </div>
+  </body>
+</html>
