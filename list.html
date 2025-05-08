@@ -50,22 +50,25 @@
     let activeTags = [];
 
     function filterItems() {
-      const searchText = searchInput.value.toLowerCase();
+  const searchText = searchInput.value.toLowerCase();
 
-      items.forEach(item => {
-        const text = item.textContent.toLowerCase();
-        const itemTags = item.dataset.tags.split(',');
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    const itemTags = item.dataset.tags
+      .split(',')
+      .map(tag => tag.trim().toLowerCase());
 
-        const matchesSearch = text.includes(searchText);
-        const matchesTags = activeTags.length === 0 || activeTags.some(tag => itemTags.includes(tag));
+    const matchesSearch = text.includes(searchText);
+    const matchesTags = activeTags.length === 0 || activeTags.some(tag => itemTags.includes(tag.toLowerCase()));
 
-        if (matchesSearch && matchesTags) {
-          item.classList.remove('hidden');
-        } else {
-          item.classList.add('hidden');
-        }
-      });
+    if (matchesSearch && matchesTags) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
     }
+  });
+}
+
 
     searchInput.addEventListener('input', filterItems);
 
