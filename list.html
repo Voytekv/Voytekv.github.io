@@ -34,7 +34,7 @@
   <div id="results">
     <div class="item" data-tags="zato,ghost,factory,town">Berezniki-2</div>
     <div class="item" data-tags="town,ghost,gulag">Karamken</div>
-    <div class="item" data-tags="town,ghost">Naukan</div>
+    <div class="item" data-tags="town,ghost" data-url="page1.html">Naukan</div>
     <div class="item" data-tags="town,ghost,military">Port Vladimir</div>
     <div class="item" data-tags="unverified">Salsk-2</div>
     <div class="item" data-tags="town,ghost,zato,factory">Seversk</div>
@@ -88,6 +88,16 @@
       filterItems();
     }
   });
+}
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    const url = item.dataset.url;
+    if (url) {
+      window.location.href = url;
+    }
+  });
+});
 </script>
 
 
