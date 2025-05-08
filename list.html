@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search with Tag Filter</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .search-bar { margin-bottom: 20px; }
+    .tags { margin-bottom: 20px; }
+    .tag { display: inline-block; background: #eee; padding: 5px 10px; margin: 5px; cursor: pointer; border-radius: 5px; }
+    .tag.active { background: #007bff; color: white; }
+    .item { padding: 10px; border-bottom: 1px solid #ddd; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <input class="search-bar" type="text" id="searchInput" placeholder="Search..." />
+
+  <div class="tags" id="tagContainer">
+    <span class="tag" data-tag="tech">Tech</span>
+    <span class="tag" data-tag="design">Design</span>
+    <span class="tag" data-tag="business">Business</span>
+  </div>
+
+  <div id="results">
+    <div class="item" data-tags="tech,design">Frontend Developer - React, CSS</div>
+    <div class="item" data-tags="business">Marketing Strategy - Growth Hacking</div>
+    <div class="item" data-tags="tech">Backend Developer - Node.js, Express</div>
+    <div class="item" data-tags="design">UI/UX Designer - Figma, Prototyping</div>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const tagContainer = document.getElementById('tagContainer');
+    const tags = document.querySelectorAll('.tag');
+    const items = document.querySelectorAll('.item');
+
+    let activeTags = [];
+
+    function filterItems() {
+      const searchText = searchInput.value.toLowerCase();
+
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        const itemTags = item.dataset.tags.split(',');
+
+        const matchesSearch = text.includes(searchText);
+        const matchesTags = activeTags.length === 0 || activeTags.some(tag => itemTags.includes(tag));
+
+        if (matchesSearch && matchesTags) {
+          item.classList.remove('hidden');
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+    }
+
+    searchInput.addEventListener('input', filterItems);
+
+    tagContainer.addEventListener('click', (e) => {
+      if (e.target.classList.contains('tag')) {
+        e.target.classList.toggle('active');
+        const tag = e.target.dataset.tag;
+
+        if (activeTags.includes(tag)) {
+          activeTags = activeTags.filter(t => t !== tag);
+        } else {
+          activeTags.push(tag);
+        }
+
+        filterItems();
+      }
+    });
+  </script>
+
+</body>
+</html>
