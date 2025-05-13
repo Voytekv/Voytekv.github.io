@@ -3,6 +3,8 @@ The final version of the russian listing project.
 
 Documents russian ghost towns, mapping anomalies, ZATO cities. I am not sure of how far i'll go with this project. I wanted to make a website but had no idea how so i figured i'll just use some tricks on github.
 
+I am quite scared seeing how many clones in lne day this site got as it only been up for a few days.
+
 I had this thing in my mind for a few weeks and i wanted to make a website that would categorize, documents, and list as many abandonned, closed towns or mapping anomalies.
 
 This list will document Russian/Soviet ghost towns, ZATO cities and mapping anomalies.
