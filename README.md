@@ -17,3 +17,6 @@ I can't even make a proper website, but seriously github is so confusing.
 Keep going: [urbanghost.ru project](https://voytekv.github.io)
 
 Contact me on Discord at: tiwger
+
+![Nordvik](major_data_fold/nordvik_fold/nordvik1.jpg)
+
