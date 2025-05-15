@@ -113,6 +113,25 @@ items.forEach(item => {
     }
   });
 });
+    items.forEach(item => {
+  const tagList = item.dataset.tags
+    .split(',')
+    .map(tag => tag.trim())
+    .filter(tag => tag); // removes empty strings
+
+  const tagContainer = document.createElement('div');
+  tagContainer.style.marginTop = '5px';
+
+  tagList.forEach(tag => {
+    const tagSpan = document.createElement('span');
+    tagSpan.classList.add('tag');
+    tagSpan.textContent = tag;
+    tagContainer.appendChild(tagSpan);
+  });
+
+  item.appendChild(tagContainer);
+});
+
 </script>
 
 
